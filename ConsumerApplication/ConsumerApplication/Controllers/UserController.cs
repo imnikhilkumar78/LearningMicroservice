@@ -67,7 +67,7 @@ namespace ConsumerApplication.Controllers
                 if (user != null)
                 {
                     TempData["token"] = user.jwtToken;
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("GetAll", "Employee");
                 }
             }
             catch

@@ -52,8 +52,13 @@ namespace ConsumerApplication.Controllers
 
         public ActionResult GetAll()
         {
-            var empl = _employeeService.GetAll();
-            return View(empl);
+            if(TempData["token"]!=null)
+            {
+                string empl = _employeeService.GetAll(TempData.Peek("token").ToString());
+                ViewBag.Employee = empl;
+            }
+            return View();
+            
         }
 
     }

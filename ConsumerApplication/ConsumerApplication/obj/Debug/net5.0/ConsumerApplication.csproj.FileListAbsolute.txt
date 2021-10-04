@@ -117,4 +117,4 @@ D:\LOCALREPOSITORY\Day29\ConsumerApplication\ConsumerApplication\obj\Debug\net5.
 D:\LOCALREPOSITORY\Day29\ConsumerApplication\ConsumerApplication\obj\Debug\net5.0\Razor\Views\User\Create.cshtml.g.cs
 D:\LOCALREPOSITORY\Day29\ConsumerApplication\ConsumerApplication\obj\Debug\net5.0\Razor\Views\User\Login.cshtml.g.cs
 D:\LOCALREPOSITORY\Day29\ConsumerApplication\ConsumerApplication\obj\Debug\net5.0\Razor\Views\Employee\AddEmpl.cshtml.g.cs
-D:\LOCALREPOSITORY\Day29\ConsumerApplication\ConsumerApplication\obj\Debug\net5.0\Razor\Views\Employee\Index.cshtml.g.cs
+D:\LOCALREPOSITORY\Day29\ConsumerApplication\ConsumerApplication\obj\Debug\net5.0\Razor\Views\Employee\GetAll.cshtml.g.cs

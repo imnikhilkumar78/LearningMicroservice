@@ -10,20 +10,28 @@ namespace ConsumerApplication.Services
 {
     public class EmployeeService
     {
-        public ICollection<EmployeeDTO> GetAll()
+        public string GetAll(string token)
         {
-            ICollection<EmployeeDTO> empl = null;
+            string employeeData = null;
+         
             using (var client = new HttpClient())
             {
                
                 client.BaseAddress = new Uri("http://localhost:19206/api/");
-                var getTask = client.GetFromJsonAsync<EmployeeDTO>("Employee");
+                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+                var getTask = client.GetAsync("Employee");
                 getTask.Wait();
                 var result = getTask.Result;
-                empl = (ICollection<EmployeeDTO>)result;
+                if(result.IsSuccessStatusCode)
+                {
+                    var data = result.Content.ReadAsStringAsync();
+                    data.Wait();
+                    employeeData = data.Result;
+                }
+              
                
             }
-            return empl;
+            return employeeData;
         }
 
         public EmployeeDTO AddEmpl(EmployeeDTO empl)
